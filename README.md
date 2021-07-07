@@ -1,2 +1,2 @@
 # sNTools
-Test Node JS Script
+A little work I did for terminal application with Node JS.
