@@ -60,7 +60,7 @@ function inpCmd(inp) {
     }
     else if (inp == "DD") {
         if (urlAdress == null || urlAdress == undefined || urlAdress == "") {
-            urlAdress = readline.question(`Please input for url address or IP address[example: 192.168.0.1]: `);
+            urlAdress = readline.question(`Please input for url address or IP address\n[example: (http or https)192.168.0.1:(port number) | http://192.168.0.1:80]: `);
             term.nCommand(inp, urlAdress);
         } else {
             term.nCommand(inp, urlAdress);

