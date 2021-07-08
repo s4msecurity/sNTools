@@ -1,5 +1,5 @@
 const scan = require("./functionsDir/nScanner");
-const term = require("./functionsDir/command");
+const term = require("./functionsDir/nCommand");
 const readline = require('readline-sync');
 
 
@@ -43,6 +43,7 @@ __________________________________________________________________
 |    UL  = User list          | View users in the public network
 |    AL  = Arp list           | View the ARP Table.
 |    PL  = Ping Send          | Send ping
+|    DD  = DDoS Attack        | DDoS Strees Testing
 |    [example: UL]: `)
     inpCmd(scanType);
 }
@@ -50,6 +51,14 @@ __________________________________________________________________
 
 function inpCmd(inp) {
     if (inp == "PL") {
+        if (urlAdress == null || urlAdress == undefined || urlAdress == "") {
+            urlAdress = readline.question(`Please input for url address or IP address[example: 192.168.0.1]: `);
+            term.nCommand(inp, urlAdress);
+        } else {
+            term.nCommand(inp, urlAdress);
+        }
+    }
+    else if (inp == "DD") {
         if (urlAdress == null || urlAdress == undefined || urlAdress == "") {
             urlAdress = readline.question(`Please input for url address or IP address[example: 192.168.0.1]: `);
             term.nCommand(inp, urlAdress);
