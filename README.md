@@ -11,10 +11,8 @@ With this script:
 - You can ping and control the device.
 - DoS Attack.
 ---------------------------------------------------------
-
 Example script used for Dos: 
 https://github.com/u4bi-store/dos/blob/master/index.js
-
 Thank you, the owner of the sample code for the DoS script.
 
 ---------------------------------------------------------
