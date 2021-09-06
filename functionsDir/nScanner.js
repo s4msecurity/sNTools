@@ -5,19 +5,20 @@ nmap.nmapLocation = "nmap"
 
 function QuickScript(urlAdress, scanType) {
 
-    let quickscan = new nmap.QuickScan("127.0.0.1 " + urlAdress)
-    quickscan.on("complete", function (data) {
+    var oap = new nmap.OsAndPortScan(urlAdress);
+
+    oap.on("complete", function(data){
         console.log(data)
     })
-    quickscan.on("error", function (error) {
+    oap.on("error", function(error){
         console.log(error)
     })
-    quickscan.startScan()
+
 }
 
 function OsAndPortScript(urlAdress, scanType) {
 
-    let quickscan = new nmap.OsAndPortScan("127.0.0.1 " + urlAdress)
+    let quickscan = new nmap.OsAndPortScan(urlAdress);
     quickscan.on("complete", function (data) {
         console.log(data)
     })
@@ -30,7 +31,7 @@ function OsAndPortScript(urlAdress, scanType) {
 
 function specialcanner(urlAdress, scanType, parameter) {
 
-    let quickscan = new nmap.NmapScan("127.0.0.1 " + urlAdress, parameter)
+    let quickscan = new nmap.OsAndPortScan(urlAdress, parameter);
     quickscan.on("complete", function (data) {
         console.log(data)
     })
