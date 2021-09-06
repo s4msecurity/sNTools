@@ -1,7 +1,9 @@
 # sNTools
 A little work I did for terminal application with Node JS.
+For this script that runs download and install, nmap must be installed on your device: https://nmap.org/
+
 ----------------------------------------------------------
-Used technologies/Library: 
+Used technologies/Library for Node JS: 
 - node-nmap
 - readline-sync
 ---------------------------------------------------------
