@@ -88,7 +88,7 @@ module.exports.nCommand = function (parameter, ip) {
 
     }
     else {
-        console.log("Linux veya başka bir sistem.")
+        console.log("Linux or another system.")
     }
 }
 
