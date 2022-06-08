@@ -34,7 +34,7 @@ function pingSending(ip) {
 }
 
 const dos = (url, qty, ms) => {
-
+    console.log("__________________________________________________________________________________________________\n")
     let err = ok = 0
     setInterval(_ => {
 
