@@ -22,7 +22,7 @@ Basic network scanner tools :)
 
 
 function nodeMapStart() {
-    urlAdress = readline.question(`Please input for url address or IP address[example: 192.168.0.1]: `);
+    urlAdress = readline.question(`Please input for url address or IP address[example: 192.168.0.1] \nIf you entered empty, another menu will appear: `);
     scanType = readline.question(`
 __________________________________________________________________________________________________
 |    Scanner Type: 
@@ -30,7 +30,7 @@ ________________________________________________________________________________
 |    O  = OS                         | Scans for open ports as well as NMAP gathered OS information.
 |    Q  = Queded                     | Queued version for greater control
 |    S  = NScanner                   | Special Scannaer, manuel. Example input: [-sP -sV -A ]
-|    UN = Network Local user list    | User found in network
+|    UN = Network Local user list    | User found in network or If you entered empty, another menu will appear (Ex: DoS Ataack)
 |    [example: T]: `)
     checkedStartType(scanType)
 }
